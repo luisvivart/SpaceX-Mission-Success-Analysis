@@ -14,42 +14,45 @@ min_payload = spacex_df['Payload Mass (kg)'].min()
 app = dash.Dash(__name__)
 
 # App layout
-app.layout = html.Div(children=[html.H1('SpaceX Launch Records Dashboard',
-                                        style={'textAlign': 'center', 'color': '#503D36',
-                                               'font-size': 40}),
-                                # Dropdown with Launch Site selection
-                                dcc.Dropdown(id='site-dropdown',
-                                             options=[
-                                                     {'label': 'All Sites', 'value': 'ALL'},
-                                                     {'label': 'CCAFS LC-40', 'value': 'CCAFS LC-40'},
-                                                     {'label': 'VAFB SLC-4E', 'value': 'VAFB SLC-4E'},
-                                                     {'label': 'KSC LC-39A', 'value': 'KSC LC-39A'},
-                                                     {'label': 'CCAFS SLC-40', 'value': 'CCAFS SLC-40'}
-                                                     ],
-                                             value='ALL',
-                                             placeholder='Select a Launch Site here',
-                                             searchable=True
-                                             # style={'width':'80%','padding':'3px','font-size':'20px','text-align-last':'center'}
-                                             ),
-                                html.Br(),
-                                
+app.layout = html.Div(children=[
+    html.H1('SpaceX Launch Records Dashboard',
+    style = {
+            'textAlign': 'center', 
+            'color': '#503D36',
+            'font-size': 40}
+    ),
+    # Dropdown with Launch Site selection
+    dcc.Dropdown(
+        id='site-dropdown',
+        options=[
+                {'label': 'All Sites', 'value': 'ALL'},
+                {'label': 'CCAFS LC-40', 'value': 'CCAFS LC-40'},
+                {'label': 'VAFB SLC-4E', 'value': 'VAFB SLC-4E'},
+                {'label': 'KSC LC-39A', 'value': 'KSC LC-39A'},
+                {'label': 'CCAFS SLC-40', 'value': 'CCAFS SLC-40'}
+                ],
+        value='ALL',
+        placeholder='Select a Launch Site here',
+        searchable=True
+        # style={'width':'80%','padding':'3px','font-size':'20px','text-align-last':'center'}
+    ),
+    html.Br(),
+    # Pie Chart showing total successful launches count for all sites
+    # If a specific launch site is selected, shows Success vs. Failed counts for the site
+    html.Div(dcc.Graph(id='success-pie-chart')),
+    html.Br(),
 
-                                # Pie Chart showing total successful launches count for all sites
-                                # If a specific launch site is selected, shows Success vs. Failed counts for the site
-                                html.Div(dcc.Graph(id='success-pie-chart')),
-                                html.Br(),
-
-                                html.P("Payload range (Kg):"),
-                                # Slider to select payload range
-                                dcc.RangeSlider(id='payload-slider',
-                                                min=0,
-                                                max=10000,
-                                                step=1000,
-                                                value=[min_payload, max_payload]
-                                                ),
-                                # Scatter plot for elation between payload and launch success
-                                html.Div(dcc.Graph(id='success-payload-scatter-chart')),
-                                ])
+    html.P("Payload range (Kg):"),
+    # Slider to select payload range
+    dcc.RangeSlider(id='payload-slider',
+                    min=0,
+                    max=10000,
+                    step=1000,
+                    value=[min_payload, max_payload]
+                    ),
+    # Scatter plot for elation between payload and launch success
+    html.Div(dcc.Graph(id='success-payload-scatter-chart')),
+    ])
                                 
 
 
