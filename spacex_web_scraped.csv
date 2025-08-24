@@ -172,7 +172,7 @@ Flight No.,Launch site,Payload,Payload mass,Orbit,Customer,Launch outcome,Versio
 ",F9 B5 ♺[,Success,25 November 2020,02:13
 101,KSC,SpaceX CRS-21,"2,972 kg",LEO,"<a href=""/wiki/NASA"" title=""NASA"">NASA</a>","Success
 ",F9 B5 ♺[,Success,6 December 2020,16:17:08
-102,CCSFS,SXM-7,"7,000 kg",GTO,"<a href=""/wiki/Sirius_XM"" title=""Sirius XM"">Sirius XM</a>","Success
+102,CCSFS,SXM-7,"7,000 kg",GTO,"<a class=""mw-redirect"" href=""/wiki/Sirius_XM"" title=""Sirius XM"">Sirius XM</a>","Success
 ",F9 B5 ♺,Success,13 December 2020,17:30:00
 103,KSC,NROL-108,C,LEO,"<a href=""/wiki/National_Reconnaissance_Office"" title=""National Reconnaissance Office"">NRO</a>","Success
 ",F9 B5 ♺,Success,19 December 2020,14:00:00
@@ -210,5 +210,5 @@ Flight No.,Launch site,Payload,Payload mass,Orbit,Customer,Launch outcome,Versio
 ",F9 B5B1063.2665,Success,26 May 2021,18:59
 120,KSC,SpaceX CRS-22,"3,328 kg",LEO,"<a href=""/wiki/NASA"" title=""NASA"">NASA</a>","Success
 ",F9 B5B1067.1668,Success,3 June 2021,17:29
-121,CCSFS,SXM-8,"7,000 kg",GTO,"<a href=""/wiki/Sirius_XM"" title=""Sirius XM"">Sirius XM</a>","Success
+121,CCSFS,SXM-8,"7,000 kg",GTO,"<a class=""mw-redirect"" href=""/wiki/Sirius_XM"" title=""Sirius XM"">Sirius XM</a>","Success
 ",F9 B5,Success,6 June 2021,04:26
